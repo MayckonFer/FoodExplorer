@@ -5,7 +5,7 @@ import { Container, Spacing, Form } from "./styles";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 
-export function SignIn() {
+export function SignUp() {
   return (
     <Container>
       <Spacing>
@@ -13,25 +13,36 @@ export function SignIn() {
           <img src="/images/logo.png" alt="Logo Food Explorer" />
 
           <Form>
-            <legend>Faça login</legend>
+            <legend>Crie sua conta</legend>
             <div>
-              <label htmlFor="email-sigin">E-mail</label>
+              <label htmlFor="name-sigUp">Seu nome</label>
+              <Input
+                type="text"
+                placeholder="Exemplo: Maria da Silva"
+                id="name-sigUp"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="email-sigUp">E-mail</label>
               <Input
                 type="email"
                 placeholder="Exemplo: exemplo@exemplo.com.br"
+                id="email-sigUp"
                 required
               />
             </div>
             <div>
-              <label htmlFor="password-sigin">Senha</label>
+              <label htmlFor="password-signUp">Senha</label>
               <Input
                 type="password"
                 placeholder="No mínimo 6 caracteres"
+                id="password-signUp"
                 required
               />
             </div>
-            <Button title="Entrar" type="submit" />
-            <a href="#">Criar uma conta</a>
+            <Button title="Criar conta" type="submit" />
+            <a href="#">Já tenho uma conta</a>
           </Form>
         </div>
       </Spacing>

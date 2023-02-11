@@ -65,4 +65,9 @@ export default createGlobalStyle`
   button:hover, a:hover {
     filter: brightness(.9)
   }
+  img {
+    width: 100%;
+    max-width: max-content;
+    height: auto;
+  }
 `;
