@@ -58,6 +58,10 @@ export default createGlobalStyle`
   a {
     text-decoration: none;
   }
+  button {
+    background: none;
+    border: none;
+  }
   button, a {
     cursor: pointer;
     transition: filter .2s;

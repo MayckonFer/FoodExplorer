@@ -2,10 +2,10 @@ import React from "react";
 
 import { Container } from "./styles";
 
-export function Input({ icon: Icon, ...rest }) {
+export function Input({ children, ...rest }) {
   return (
     <Container>
-      {Icon && <Icon size={20} />}
+      {children}
       <input {...rest} />
     </Container>
   );
