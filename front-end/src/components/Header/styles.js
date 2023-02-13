@@ -34,6 +34,10 @@ export const Spacing = styled.div`
 export const OpenMenu = styled.button`
   display: flex;
 
+  > svg line {
+    color: var(--lt-100);
+  }
+
   @media (min-width: 992px) {
     display: none;
   }
@@ -43,12 +47,16 @@ export const WrapperInput = styled.div`
   width: 100%;
   display: none;
 
-  @media (min-width: 992px) {
-    display: flex;
-    max-width: 50.1rem;
+  > svg path {
+    fill: var(--lt-400);
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 992px) {
+    display: flex;
+    max-width: 45.1rem;
+  }
+
+  @media (min-width: 1100px) {
     display: flex;
     max-width: 58.1rem;
   }
@@ -90,6 +98,12 @@ export const WrapperCart = styled.div`
 
 export const LogOut = styled.button`
   display: none;
+
+  > svg line,
+  svg path,
+  svg polyline {
+    color: var(--lt-100);
+  }
 
   @media (min-width: 992px) {
     display: flex;

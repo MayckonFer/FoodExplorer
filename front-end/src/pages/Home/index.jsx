@@ -3,6 +3,7 @@ import React from "react";
 import { Container, Spacing, Main, WrapperInfo } from "./styles";
 
 import { Header } from "../../components/Header";
+import { Meals } from "../../components/Meals";
 
 export function Home() {
   return (
@@ -20,6 +21,8 @@ export function Home() {
               <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
             </div>
           </WrapperInfo>
+
+          <Meals />
         </Spacing>
       </Main>
     </Container>

@@ -26,12 +26,13 @@ export const Spacing = styled.div`
 
     margin-top: 3.6rem;
 
-    span {
+    button {
       font-size: 2.4rem;
       font-family: var(--font-pop);
       font-weight: 400;
       line-height: 140%;
       color: var(--lt-100);
+      text-align: left;
       padding-bottom: 1rem;
 
       border-bottom: 1px solid var(--dk-700);
@@ -54,5 +55,11 @@ export const Menu = styled.div`
     font-weight: 400;
     line-height: 2.5rem;
     color: var(--lt-100);
+  }
+`;
+
+export const ButtonClose = styled.button`
+  > svg path {
+    fill: var(--lt-100);
   }
 `;
