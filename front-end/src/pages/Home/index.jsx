@@ -4,12 +4,12 @@ import { Container, Spacing, Main, WrapperInfo } from "./styles";
 
 import { Header } from "../../components/Header";
 import { Meals } from "../../components/Meals";
+import { Footer } from "../../components/Footer";
 
 export function Home() {
   return (
     <Container>
       <Header />
-
       <Main>
         <Spacing>
           <WrapperInfo>
@@ -23,8 +23,11 @@ export function Home() {
           </WrapperInfo>
 
           <Meals />
+          <Meals />
+          <Meals />
         </Spacing>
       </Main>
+      <Footer />
     </Container>
   );
 }

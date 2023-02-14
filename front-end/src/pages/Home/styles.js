@@ -13,6 +13,7 @@ export const Spacing = styled.div`
 
 export const Main = styled.main`
   padding-top: 11rem;
+  padding-bottom: 4.6rem;
 `;
 
 export const WrapperInfo = styled.div`
