@@ -13,8 +13,14 @@ export const Spacing = styled.div`
 
   > div {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
+
+    @media (min-width: 576px) {
+      flex-direction: row;
+    }
 
     p {
       font-size: 1.4rem;

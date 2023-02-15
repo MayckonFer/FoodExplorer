@@ -5,6 +5,8 @@ import { Container, Spacing, Main, WrapperInfo } from "./styles";
 import { Header } from "../../components/Header";
 import { Meals } from "../../components/Meals";
 import { Footer } from "../../components/Footer";
+import { Dessert } from "../../components/Dessert";
+import { Drinks } from "../../components/Drinks";
 
 export function Home() {
   return (
@@ -23,8 +25,8 @@ export function Home() {
           </WrapperInfo>
 
           <Meals />
-          <Meals />
-          <Meals />
+          <Dessert />
+          <Drinks />
         </Spacing>
       </Main>
       <Footer />
