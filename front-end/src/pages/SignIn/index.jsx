@@ -10,7 +10,7 @@ export function SignIn() {
     <Container>
       <Spacing>
         <div>
-          <img src="/images/logo.png" alt="Logo Food Explorer" />
+          <img src="/assets/images/logo.png" alt="Logo Food Explorer" />
 
           <Form>
             <legend>Faça login</legend>

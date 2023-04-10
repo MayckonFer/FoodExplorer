@@ -1,13 +1,12 @@
 import { Container, Title } from "./styles";
-import { Link } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import { CardDish } from "../CardDish";
+import { CardAdmin } from "../CardAdmin";
 
-export function Dessert() {
+export function DessertAdmin() {
   return (
     <Container>
       <Title>Sobremesa</Title>
@@ -32,7 +31,7 @@ export function Dessert() {
         }}
       >
         <SwiperSlide>
-          <CardDish
+          <CardAdmin
             image="/assets/images/image-6.png"
             title="Peachy pastrie"
             description="Delicioso folheado de pêssego com folhas de hortelã."
@@ -40,7 +39,7 @@ export function Dessert() {
           />
         </SwiperSlide>
         <SwiperSlide>
-          <CardDish
+          <CardAdmin
             image="/assets/images/image-6.png"
             title="Peachy pastrie"
             description="Delicioso folheado de pêssego com folhas de hortelã."
@@ -48,7 +47,7 @@ export function Dessert() {
           />
         </SwiperSlide>
         <SwiperSlide>
-          <CardDish
+          <CardAdmin
             image="/assets/images/image-6.png"
             title="Peachy pastrie"
             description="Delicioso folheado de pêssego com folhas de hortelã."
@@ -56,7 +55,7 @@ export function Dessert() {
           />
         </SwiperSlide>
         <SwiperSlide>
-          <CardDish
+          <CardAdmin
             image="/assets/images/image-6.png"
             title="Peachy pastrie"
             description="Delicioso folheado de pêssego com folhas de hortelã."

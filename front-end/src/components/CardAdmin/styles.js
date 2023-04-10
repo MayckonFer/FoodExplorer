@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Link } from "react-router-dom";
+
 export const Container = styled.div`
   position: relative;
 
@@ -12,17 +14,16 @@ export const Container = styled.div`
 
   width: 100%;
   max-width: 21rem;
-  height: 39.2rem;
+  height: 30.2rem;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
 
   @media (min-width: 1024px) {
     max-width: 30.1rem;
-    height: 52.8rem;
+    height: 48.8rem;
     padding: 2.4rem;
   }
 
@@ -36,7 +37,7 @@ export const Container = styled.div`
   }
 `;
 
-export const ButtonFavorite = styled.button`
+export const ButtonFavorite = styled(Link)`
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -83,34 +84,5 @@ export const Price = styled.span`
 
   @media (min-width: 1024px) {
     font-size: 3.2rem;
-  }
-`;
-
-export const WrapperFooter = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 1.2rem;
-
-  @media (min-width: 1024px) {
-    flex-direction: row;
-  }
-
-  > div {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    > button svg path {
-      fill: var(--lt-100);
-    }
-
-    span {
-      font-size: 2rem;
-      font-weight: 700;
-      line-height: 160%;
-
-      color: var(--lt-300);
-    }
   }
 `;

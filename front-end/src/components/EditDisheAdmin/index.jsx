@@ -15,10 +15,10 @@ import { Button } from "../Button";
 
 import { Link } from "react-router-dom";
 
-export function EditDishe() {
+export function EditDisheAdmin() {
   return (
     <Container>
-      <Link to="/">
+      <Link to="/home-admin">
         <MdOutlineArrowBackIos size={32} />
         voltar
       </Link>
@@ -42,19 +42,7 @@ export function EditDishe() {
           </WrapperTags>
 
           <WrapperButton>
-            <div>
-              <button>
-                <BsDash size={24} />
-              </button>
-              <span>01</span>
-              <button>
-                <AiOutlinePlus size={24} />
-              </button>
-            </div>
-
-            <Button title="incluir ∙ R$ 25,00">
-              <img src="/assets/images/receipt.svg" alt="" />
-            </Button>
+            <Button title="Editar Prato" />
           </WrapperButton>
         </ContentDescription>
       </Dishe>

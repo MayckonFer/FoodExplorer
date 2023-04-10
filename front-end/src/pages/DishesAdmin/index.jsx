@@ -2,14 +2,14 @@ import React from "react";
 
 import { Container, Spacing, Main } from "./styles";
 
-import { EditDishe } from "../../components/EditDishe";
+import { EditDisheAdmin } from "../../components/EditDisheAdmin";
 
-export function Dishes() {
+export function DishesAdmin() {
   return (
     <Container>
       <Main>
         <Spacing>
-          <EditDishe />
+          <EditDisheAdmin />
         </Spacing>
       </Main>
     </Container>

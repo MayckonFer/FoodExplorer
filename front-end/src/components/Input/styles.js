@@ -7,7 +7,12 @@ export const Container = styled.div`
   background-color: var(--dk-900);
   color: var(--lt-400);
   margin-bottom: 0.8rem;
+  padding: 0 1rem;
   border-radius: 1rem;
+
+  > label {
+    cursor: pointer;
+  }
 
   > input {
     height: 5.6rem;

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { Container, Title } from "./styles";
 
@@ -7,9 +8,9 @@ import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { CardDish } from "../CardDish";
+import { CardAdmin } from "../CardAdmin";
 
-export function Meals() {
+export function MealsAdmin() {
   return (
     <Container>
       <Title>Refeições</Title>
@@ -34,7 +35,7 @@ export function Meals() {
         }}
       >
         <SwiperSlide>
-          <CardDish
+          <CardAdmin
             image="/assets/images/image-1.png"
             title="Salada Ravanello"
             description="Rabanetes, folhas verdes e molho agridoce salpicados com gergelim"
@@ -42,7 +43,7 @@ export function Meals() {
           />
         </SwiperSlide>
         <SwiperSlide>
-          <CardDish
+          <CardAdmin
             image="/assets/images/image-1.png"
             title="Salada Ravanello"
             description="Rabanetes, folhas verdes e molho agridoce salpicados com gergelim"
@@ -50,7 +51,7 @@ export function Meals() {
           />
         </SwiperSlide>
         <SwiperSlide>
-          <CardDish
+          <CardAdmin
             image="/assets/images/image-1.png"
             title="Salada Ravanello"
             description="Rabanetes, folhas verdes e molho agridoce salpicados com gergelim"
@@ -58,7 +59,7 @@ export function Meals() {
           />
         </SwiperSlide>
         <SwiperSlide>
-          <CardDish
+          <CardAdmin
             image="/assets/images/image-1.png"
             title="Salada Ravanello"
             description="Rabanetes, folhas verdes e molho agridoce salpicados com gergelim"

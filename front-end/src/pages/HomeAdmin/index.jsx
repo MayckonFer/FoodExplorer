@@ -2,13 +2,11 @@ import React from "react";
 
 import { Container, Spacing, Main, WrapperInfo } from "./styles";
 
-import { Header } from "../../components/Header";
-import { Meals } from "../../components/Meals";
-import { Footer } from "../../components/Footer";
-import { Dessert } from "../../components/Dessert";
-import { Drinks } from "../../components/Drinks";
+import { MealsAdmin } from "../../components/MealsAdmin";
+import { DessertAdmin } from "../../components/DessertAdmin";
+import { DrinksAdmin } from "../../components/DrinksAdmin";
 
-export function Home() {
+export function HomeAdmin() {
   return (
     <Container>
       <Main>
@@ -23,9 +21,9 @@ export function Home() {
             </div>
           </WrapperInfo>
 
-          <Meals />
-          <Dessert />
-          <Drinks />
+          <MealsAdmin />
+          <DessertAdmin />
+          <DrinksAdmin />
         </Spacing>
       </Main>
     </Container>

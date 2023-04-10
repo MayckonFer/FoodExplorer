@@ -14,6 +14,7 @@ import {
 } from "./styles";
 
 import { Button } from "../Button";
+import { Link } from "react-router-dom";
 
 export function CardDish({ image, title, price, description }) {
   const [favoriteHeart, setFavoriteHeart] = useState(false);
@@ -48,7 +49,9 @@ export function CardDish({ image, title, price, description }) {
           </button>
         </div>
 
-        <Button title="incluir" />
+        <Link to="/prato">
+          <Button title="incluir" />
+        </Link>
       </WrapperFooter>
     </Container>
   );

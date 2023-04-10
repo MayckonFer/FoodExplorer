@@ -1,13 +1,12 @@
 import { Container, Title } from "./styles";
-import { Link } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import { CardDish } from "../CardDish";
+import { CardAdmin } from "../CardAdmin";
 
-export function Drinks() {
+export function DrinksAdmin() {
   return (
     <Container>
       <Title>Bebidas</Title>
@@ -32,7 +31,7 @@ export function Drinks() {
         }}
       >
         <SwiperSlide>
-          <CardDish
+          <CardAdmin
             image="/assets/images/image-9.png"
             title="Suco de maracujá"
             description="Suco de maracujá gelado, cremoso, docinho."
@@ -40,7 +39,7 @@ export function Drinks() {
           />
         </SwiperSlide>
         <SwiperSlide>
-          <CardDish
+          <CardAdmin
             image="/assets/images/image-9.png"
             title="Suco de maracujá"
             description="Suco de maracujá gelado, cremoso, docinho."
@@ -48,7 +47,7 @@ export function Drinks() {
           />
         </SwiperSlide>
         <SwiperSlide>
-          <CardDish
+          <CardAdmin
             image="/assets/images/image-9.png"
             title="Suco de maracujá"
             description="Suco de maracujá gelado, cremoso, docinho."
@@ -56,7 +55,7 @@ export function Drinks() {
           />
         </SwiperSlide>
         <SwiperSlide>
-          <CardDish
+          <CardAdmin
             image="/assets/images/image-9.png"
             title="Suco de maracujá"
             description="Suco de maracujá gelado, cremoso, docinho."

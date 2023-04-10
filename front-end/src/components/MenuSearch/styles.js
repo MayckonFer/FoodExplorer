@@ -9,8 +9,6 @@ export const Container = styled.section`
   height: 100vh;
 
   background-color: var(--dk-400);
-
-  display: none;
 `;
 
 export const Spacing = styled.div`

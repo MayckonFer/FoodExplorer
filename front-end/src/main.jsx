@@ -3,9 +3,13 @@ import ReactDOM from "react-dom/client";
 import { Routes } from "./Routes";
 import GlobalStyles from "./styles/global";
 
+import { IndexContext } from "./hooks/context";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <GlobalStyles />
-    <Routes />
+    <IndexContext>
+      <GlobalStyles />
+      <Routes />
+    </IndexContext>
   </React.StrictMode>
 );
