@@ -1,15 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Routes } from "./Routes";
-import GlobalStyles from "./styles/global";
-
-import { IndexContext } from "./hooks/context";
+import { App } from "./App.jsx";
+import { GlobalStyle } from "./styles/global.js";
+import { ThemeProvider } from "styled-components";
+import { defaultTheme } from "./styles/theme.js";
+import { ContextProvider } from "./Context/ContextStates";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <IndexContext>
-      <GlobalStyles />
-      <Routes />
-    </IndexContext>
+    <ContextProvider>
+      <ThemeProvider theme={defaultTheme}>
+        <GlobalStyle />
+        <App />
+      </ThemeProvider>
+    </ContextProvider>
   </React.StrictMode>
 );

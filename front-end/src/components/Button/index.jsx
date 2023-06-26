@@ -1,10 +1,11 @@
-import { Container } from "./styles";
+/* eslint-disable react/prop-types */
+import { ContainerButton } from "./styles";
 
-export function Button({ title, children, loading = false, ...rest }) {
+export function Button({ children, title, loading = false, ...rest }) {
   return (
-    <Container type="button" disabled={loading} {...rest}>
+    <ContainerButton type="buttom" disabled={loading} {...rest}>
       {children}
       {loading ? "Carregando..." : title}
-    </Container>
+    </ContainerButton>
   );
 }

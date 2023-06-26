@@ -1,33 +1,68 @@
-import React from "react";
-
-import { Container, Spacing, Main, WrapperInfo } from "./styles";
-
 import { Header } from "../../components/Header";
-import { Meals } from "../../components/Meals";
 import { Footer } from "../../components/Footer";
-import { Dessert } from "../../components/Dessert";
-import { Drinks } from "../../components/Drinks";
+import { Card } from "./Card";
+
+import {
+  ContainerMain,
+  Banner,
+  ContainerSnack,
+  TitleHome,
+  WrapperCards,
+} from "./styles";
+
+import imgBanner from "/assets/images/img-banner.png";
 
 export function Home() {
   return (
-    <Container>
-      <Main>
-        <Spacing>
-          <WrapperInfo>
-            <img src="/assets/images/img1.png" alt="Imagem de frutas" />
-            <img src="/assets/images/img2.png" alt="Imagem de frutas" />
+    <>
+      <Header />
 
-            <div>
-              <h2>Sabores inigualáveis</h2>
-              <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
-            </div>
-          </WrapperInfo>
+      <ContainerMain>
+        <Banner>
+          <img src={imgBanner} alt="" />
+          <div>
+            <h2>Sabores inigualáveis</h2>
+            <small>
+              Sinta o cuidado do preparo com ingredientes selecionados.
+            </small>
+          </div>
+        </Banner>
 
-          <Meals />
-          <Dessert />
-          <Drinks />
-        </Spacing>
-      </Main>
-    </Container>
+        <ContainerSnack>
+          <TitleHome>Refeições</TitleHome>
+
+          <WrapperCards>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </WrapperCards>
+        </ContainerSnack>
+
+        <ContainerSnack>
+          <TitleHome>Sobremesas</TitleHome>
+
+          <WrapperCards>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </WrapperCards>
+        </ContainerSnack>
+
+        <ContainerSnack>
+          <TitleHome>Bebidas</TitleHome>
+
+          <WrapperCards>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </WrapperCards>
+        </ContainerSnack>
+      </ContainerMain>
+
+      <Footer />
+    </>
   );
 }

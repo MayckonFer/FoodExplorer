@@ -1,34 +1,38 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const ContainerInput = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: var(--dk-900);
-  color: var(--lt-400);
+
+  background-color: ${({ theme }) => theme.dark_900};
+  color: ${({ theme }) => theme.light_100};
+
   margin-bottom: 0.8rem;
-  padding: 0 1rem;
   border-radius: 1rem;
 
-  > label {
-    cursor: pointer;
-  }
-
   > input {
-    height: 5.6rem;
+    height: 4.8rem;
     width: 100%;
-    padding: 1.2rem;
-    color: var(--lt-400);
+
+    padding: 1.6rem;
+
+    color: ${({ theme }) => theme.light_100};
     background: transparent;
     border: 0;
-    outline: none;
 
     &:placeholder {
-      color: var(--lt-400);
+      color: ${({ theme }) => theme.light_500};
     }
   }
 
   > svg {
     margin-left: 1.6rem;
+    width: 3.2rem;
+    height: 3.2rem;
+
+    > path {
+      fill: ${({ theme }) => theme.light_400};
+    }
   }
 `;

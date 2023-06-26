@@ -1,15 +1,19 @@
 import styled from "styled-components";
 
-export const Container = styled.button`
+export const ContainerButton = styled.button`
   width: 100%;
-  background-color: var(--tts-tto-100);
-  color: var(--lt-100);
-  padding: 1.2rem 4.4rem;
+  background-color: ${({ theme }) => theme.red_400};
+  color: ${({ theme }) => theme.light_100};
+
+  height: 5.6rem;
   border-radius: 1rem;
-  border: none;
-  font-size: 1.4rem;
   font-weight: 500;
-  font-family: var(--font-pop);
+  transition: 100ms;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+
   &:disabled {
     opacity: 0.5;
   }

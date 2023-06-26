@@ -1,102 +1,84 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
-  background-color: var(--dk-400);
-`;
-
-export const Spacing = styled.div`
+export const ContainerMain = styled.main`
   width: 100%;
   max-width: 110rem;
   padding: 0 2rem;
   margin: 0 auto;
 `;
 
-export const Main = styled.main`
-  padding-top: 11rem;
-  padding-bottom: 4.6rem;
-`;
+export const Banner = styled.div`
+  width: 100%;
+  height: 12rem;
 
-export const WrapperInfo = styled.div`
-  position: relative;
-  background: var(--gts-200);
-  border-radius: 0.2rem;
   display: flex;
-  align-items: flex-end;
-  margin-top: 4.4rem;
-  height: 9rem;
+  align-items: center;
+  justify-content: flex-end;
 
-  @media (min-width: 475px) {
-    height: 12rem;
-  }
+  background: ${({ theme }) => theme.gradient_200};
+  margin-top: 4.4rem;
+
+  position: relative;
 
   @media (min-width: 576px) {
-    height: 18rem;
+    height: 16rem;
+  }
+
+  @media (min-width: 768px) {
+    height: 19.9rem;
   }
 
   @media (min-width: 992px) {
     height: 26rem;
-    margin-top: 12rem;
-    border-radius: 0.8rem;
+    margin-top: 15rem;
   }
 
-  img:nth-child(1) {
-    width: 100%;
-    max-width: 14rem;
+  > img {
+    position: absolute;
+    top: -3rem;
+    left: -4rem;
 
-    @media (min-width: 375px) {
-      max-width: 16rem;
-    }
+    width: 23rem;
 
-    @media (min-width: 576px) {
-      display: none;
-    }
-
-    @media (min-width: 992px) {
-      display: none;
-    }
-  }
-
-  img:nth-child(2) {
     display: none;
 
+    @media (min-width: 425px) {
+      display: block;
+    }
+
     @media (min-width: 576px) {
-      display: flex;
-      max-width: 30.2rem;
+      width: 29.5rem;
+    }
+
+    @media (min-width: 768px) {
+      width: 35.5rem;
     }
 
     @media (min-width: 992px) {
-      max-width: 50.2rem;
+      width: 60.5rem;
+      top: -13rem;
     }
   }
 
   > div {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    margin-right: auto;
-    margin-bottom: 2.2rem;
-
-    @media (min-width: 576px) {
-      margin-bottom: 5.2rem;
-    }
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 36.5rem;
+    padding: 1rem;
 
     @media (min-width: 992px) {
-      margin-bottom: 9.2rem;
+      width: 52.5rem;
     }
 
-    h2 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      font-family: var(--font-pop);
-      line-height: 140%;
-      color: var(--lt-200);
+    > h2 {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: ${({ theme }) => theme.light_100};
 
-      @media (min-width: 375px) {
-        font-size: 1.4rem;
-      }
-
-      @media (min-width: 475px) {
-        font-size: 1.8rem;
+      @media (min-width: 576px) {
+        font-size: 2.4rem;
       }
 
       @media (min-width: 768px) {
@@ -108,26 +90,64 @@ export const WrapperInfo = styled.div`
       }
     }
 
-    p {
-      font-size: 1rem;
+    > small {
+      font-size: 1.2rem;
       font-weight: 400;
-      font-family: var(--font-pop);
-      line-height: 140%;
-      color: var(--lt-200);
+      color: ${({ theme }) => theme.light_100};
 
-      @media (min-width: 475px) {
-        font-size: 1.2rem;
-        max-width: 27rem;
+      @media (min-width: 576px) {
+        font-size: 1.4rem;
       }
 
       @media (min-width: 768px) {
         font-size: 1.6rem;
       }
-
-      @media (min-width: 992px) {
-        font-size: 1.6rem;
-        max-width: max-content;
-      }
     }
   }
 `;
+
+export const TitleHome = styled.h2`
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 140%;
+  color: ${({ theme }) => theme.light_100};
+`;
+
+export const WrapperCards = styled.div`
+  width: 100%;
+  overflow-x: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  margin-top: 2.4rem;
+
+  &::-webkit-scrollbar-track {
+    background: none;
+  }
+  &::-webkit-scrollbar {
+    width: 0.6rem;
+    height: 0.6rem;
+    background: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.cyan_dark};
+    border-radius: 8px;
+  }
+
+  @media (min-width: 768px) {
+    gap: 2.4rem;
+  }
+`;
+
+export const ContainerSnack = styled.div`
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 5rem;
+`;
+
+export const ContainerDessert = styled.div``;
+
+export const ContainerDrinks = styled.div``;

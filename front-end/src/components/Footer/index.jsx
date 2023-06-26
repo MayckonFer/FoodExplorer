@@ -1,19 +1,15 @@
-import React from "react";
+import { ContainerFooter } from "./styles";
 
-import { Container, Spacing } from "./styles";
+import imgFooter from "/assets/images/img-footer.png";
 
 export function Footer() {
   return (
-    <Container>
-      <Spacing>
-        <div>
-          <img
-            src="/assets/images/logo-footer.png"
-            alt="logo rodapé food explorer"
-          />
-          <p>© 2023 - Todos os direitos reservados.</p>
-        </div>
-      </Spacing>
-    </Container>
+    <ContainerFooter>
+      <div>
+        <img src={imgFooter} alt="" />
+
+        <p>© 2023 - Todos os direitos reservados.</p>
+      </div>
+    </ContainerFooter>
   );
 }

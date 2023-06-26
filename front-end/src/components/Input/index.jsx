@@ -1,12 +1,11 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+import { ContainerInput } from "./styles";
 
-import { Container } from "./styles";
-
-export function Input({ children, ...rest }) {
+export function Input({ icon: Icon, ...rest }) {
   return (
-    <Container>
-      {children}
+    <ContainerInput>
+      {Icon && <Icon size={20} />}
       <input {...rest} />
-    </Container>
+    </ContainerInput>
   );
 }

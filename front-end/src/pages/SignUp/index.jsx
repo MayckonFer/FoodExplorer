@@ -1,51 +1,45 @@
-import React from "react";
+import { ContainerSignUp, ContainerForm } from "./styles";
 
-import { Container, Spacing, Form } from "./styles";
+import logo from "/assets/images/logo.png";
 
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 
 export function SignUp() {
   return (
-    <Container>
-      <Spacing>
-        <div>
-          <img src="/assets/images/logo.png" alt="Logo Food Explorer" />
+    <ContainerSignUp>
+      <img src={logo} alt="" />
 
-          <Form>
-            <legend>Crie sua conta</legend>
-            <div>
-              <label htmlFor="name-sigUp">Seu nome</label>
-              <Input
-                type="text"
-                placeholder="Exemplo: Maria da Silva"
-                id="name-sigUp"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="email-sigUp">E-mail</label>
-              <Input
-                type="email"
-                placeholder="Exemplo: exemplo@exemplo.com.br"
-                id="email-sigUp"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="password-signUp">Senha</label>
-              <Input
-                type="password"
-                placeholder="No mínimo 6 caracteres"
-                id="password-signUp"
-                required
-              />
-            </div>
-            <Button title="Criar conta" type="submit" />
-            <a href="#">Já tenho uma conta</a>
-          </Form>
+      <ContainerForm>
+        <legend>Crie sua conta</legend>
+
+        <div>
+          <label htmlFor="name">Seu nome</label>
+          <Input type="text" id="name" placeholder="Exemplo: Maria da Silva" />
         </div>
-      </Spacing>
-    </Container>
+
+        <div>
+          <label htmlFor="email">Email</label>
+          <Input
+            type="email"
+            id="email"
+            placeholder="Exemplo: exemplo@exemplo.com.br"
+          />
+        </div>
+
+        <div>
+          <label htmlFor="password">Senha</label>
+          <Input
+            type="password"
+            id="password"
+            placeholder="No mínimo 6 caracteres"
+          />
+        </div>
+
+        <Button title="Entrar" />
+
+        <a href="#">Criar uma conta</a>
+      </ContainerForm>
+    </ContainerSignUp>
   );
 }

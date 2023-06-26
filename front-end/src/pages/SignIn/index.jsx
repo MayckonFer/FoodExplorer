@@ -1,40 +1,40 @@
-import React from "react";
+import { ContainerSignIn, ContainerForm } from "./styles";
 
-import { Container, Spacing, Form } from "./styles";
+import logo from "/assets/images/logo.png";
 
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 
 export function SignIn() {
   return (
-    <Container>
-      <Spacing>
-        <div>
-          <img src="/assets/images/logo.png" alt="Logo Food Explorer" />
+    <ContainerSignIn>
+      <img src={logo} alt="" />
 
-          <Form>
-            <legend>Faça login</legend>
-            <div>
-              <label htmlFor="email-sigin">E-mail</label>
-              <Input
-                type="email"
-                placeholder="Exemplo: exemplo@exemplo.com.br"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="password-sigin">Senha</label>
-              <Input
-                type="password"
-                placeholder="No mínimo 6 caracteres"
-                required
-              />
-            </div>
-            <Button title="Entrar" type="submit" />
-            <a href="#">Criar uma conta</a>
-          </Form>
+      <ContainerForm>
+        <legend>Faça login</legend>
+
+        <div>
+          <label htmlFor="email">Email</label>
+          <Input
+            type="email"
+            id="email"
+            placeholder="Exemplo: exemplo@exemplo.com.br"
+          />
         </div>
-      </Spacing>
-    </Container>
+
+        <div>
+          <label htmlFor="password">Senha</label>
+          <Input
+            type="password"
+            id="password"
+            placeholder="No mínimo 6 caracteres"
+          />
+        </div>
+
+        <Button title="Entrar" />
+
+        <a href="#">Criar uma conta</a>
+      </ContainerForm>
+    </ContainerSignIn>
   );
 }

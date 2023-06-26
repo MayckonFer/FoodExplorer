@@ -1,77 +1,51 @@
 import { createGlobalStyle } from "styled-components";
 
-export default createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  :root {
-    font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    --font-rb: 'Roboto', sans-serif;
-    --font-pop: 'Poppins', sans-serif;
+:root {
+  font-size: 62.5%;
+}
 
-    --lt-100: #ffffff;
-    --lt-200: #FFFAF1;
-    --lt-300: #E1E1E6;
-    --lt-400: #C4C4CC;
-    --lt-500: #7C7C8A;
-    --lt-600: #76797B; 
-    --lt-700: #4D585E; 
+:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px ${({ theme }) => theme.cyan_dark};
+  border-radius: 8px;
+}
 
-    --dk-100: #000405;
-    --dk-200: #00070A;
-    --dk-300: #000204;
-    --dk-400: #000A0F;
-    --dk-500: #000C12;
-    --dk-600: #00111A;
-    --dk-700: #001119;
-    --dk-800: #0D161B;
-    --dk-900: #0D1D25;
-    --dk-1000: #192227;
+body {
+  background: ${({ theme }) => theme.dark_100};
+  color: ${({ theme }) => theme.light_100};
+  -webkit-font-smoothing: antialiased;
+}
 
-    --gts-100: linear-gradient(90deg, rgba(0, 10, 15, 0.272541) 0%, #000A0F 100%);
-    --gts-200: linear-gradient(180deg, #091E26 0%, #00131C 100%);
- 
-    --tts-tto-100: #750310;
-    --tts-tto-200: #92000E;
-    --tts-tto-300: #AB222E;
-    --tts-tto-400: #AB4D55;
+body,
+input,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
 
-    --tts-crt-100: #FBA94C;
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
 
-    --tts-mt-100: #04D361;
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-    --tts-ck-200: #82F3FF;
-    --tts-ck-100: #065E7C;
-  }
-  body {
-    background-color: var(--dk-400);
-    font-family: var(--font-rb);
-    -webkit-font-smoothing: antialiased;
-  }
-  body, input, button, textarea {
-    font-family: var(--font-rb);
-    font-size: 1.6rem;
-  }
-  a {
-    text-decoration: none;
-  }
-  button {
-    background: none;
-    border: none;
-  }
-  button, a {
-    cursor: pointer;
-    transition: filter .2s;
-  }
-  button:hover, a:hover {
-    filter: brightness(.9)
-  }
-  img {
-    width: 100%;
-    max-width: max-content;
-    height: auto;
-  }
+img {
+  width: 100%;
+  max-width: max-content;
+  height: auto;
+}
 `;
